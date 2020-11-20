@@ -4,6 +4,7 @@
 
 cPasajero::cPasajero(string nombre, const string dni, cCodigoPasaje *codigodelpasaje) :cPersona(nombre, dni, codigodelpasaje)
 {
+	Estado = false;
 }
 
 
