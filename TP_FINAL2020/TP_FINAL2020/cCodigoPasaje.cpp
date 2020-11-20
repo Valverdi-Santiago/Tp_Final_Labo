@@ -21,7 +21,7 @@ void cCodigoPasaje::Set_Asiento(char aciento)
 	Asiento = aciento;
 }
 
-string cCodigoPasaje::To_StringCodigo() //VER SI LO TOMA BIEN
+string cCodigoPasaje::To_StringCodigo()
 {
 	return Tipo + "-" + Dni + "-" + to_string(Fila) + "-" + Asiento;
 }
