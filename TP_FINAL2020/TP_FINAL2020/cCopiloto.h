@@ -6,7 +6,7 @@ class cCopiloto : public cPiloto
 {
 
 public:
-	cCopiloto();
+	cCopiloto(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 
 	void Comunicar_Torre();
 

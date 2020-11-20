@@ -1,5 +1,5 @@
 #pragma once
-#include <string>  //VER SI LO DEJO
+#include <string>  
 
 using namespace std;
 
@@ -17,6 +17,7 @@ public:
 
 	string To_StringCodigo();
 	void Set_Asiento(char aciento);
+	const string Get_Dni();
 
 	~cCodigoPasaje();
 };

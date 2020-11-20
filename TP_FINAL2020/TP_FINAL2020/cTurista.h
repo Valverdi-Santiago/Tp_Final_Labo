@@ -7,7 +7,7 @@ class cTurista : public cPasajero
 {
 
 public:
-	cTurista();
+	cTurista(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 	~cTurista();
 };
 

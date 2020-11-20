@@ -9,7 +9,7 @@ private:
 	bool Ocupada_Libre; //VER SI LO DEJAMOS
 
 public:
-	cAzafata();
+	cAzafata(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 
 	void Entregar_Alimento();
 	void Atender_Pasajero();

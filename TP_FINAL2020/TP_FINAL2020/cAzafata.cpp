@@ -2,7 +2,7 @@
 
 
 
-cAzafata::cAzafata(): cPersona()
+cAzafata::cAzafata(string nombre, const string dni, cCodigoPasaje *codigodelpasaje): cPersona(nombre, dni, codigodelpasaje)
 {
 	Ocupada_Libre = false;
 }

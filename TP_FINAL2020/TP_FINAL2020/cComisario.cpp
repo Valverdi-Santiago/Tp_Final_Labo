@@ -2,7 +2,7 @@
 
 
 
-cComisario::cComisario(): cPersona()
+cComisario::cComisario(string nombre, const string dni, cCodigoPasaje *codigodelpasaje): cPersona(nombre, dni, codigodelpasaje)
 {
 }
 

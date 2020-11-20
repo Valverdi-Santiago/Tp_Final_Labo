@@ -1,5 +1,5 @@
 #pragma once
-#include <string>  //VER SI LO DEJO
+//#include <string>  
 #include "cCodigoPasaje.h"
 using namespace std;
 

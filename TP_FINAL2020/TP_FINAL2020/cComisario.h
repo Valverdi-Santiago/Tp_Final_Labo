@@ -8,7 +8,7 @@ class cComisario : public cPersona
 {
 
 public:
-	cComisario();
+	cComisario(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 
 	void Reduce(cPasajero *p);
 	void Encerrar(cPasajero *p);

@@ -6,7 +6,7 @@ class cPrimera : public cPasajero
 {
 
 public:
-	cPrimera();
+	cPrimera(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 
 	void Masajes();
 	void Tomar_Alcohol();

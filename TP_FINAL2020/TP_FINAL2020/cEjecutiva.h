@@ -7,7 +7,7 @@ class cEjecutiva : public cPasajero
 {
 
 public:
-	cEjecutiva();
+	cEjecutiva(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 	
 	void Trabajar();
 

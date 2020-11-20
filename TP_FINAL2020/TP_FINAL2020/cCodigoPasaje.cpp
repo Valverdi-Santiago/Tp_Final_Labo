@@ -2,18 +2,24 @@
 
 
 
-cCodigoPasaje::cCodigoPasaje():Dni(" ")
+cCodigoPasaje::cCodigoPasaje() :Dni(" ")
 {
 	Tipo = " ";
 	Fila = -1;
 	Asiento = ' ';
 }
 
-cCodigoPasaje::cCodigoPasaje(string tipo, const string dni, int fila, char asiento): Dni(dni)
+cCodigoPasaje::cCodigoPasaje(string tipo, const string dni, int fila, char asiento) : Dni(dni)
 {
 	Tipo = tipo;
 	Fila = fila;
 	Asiento = asiento;
+}
+
+
+string cCodigoPasaje::To_StringCodigo()
+{
+	return Tipo + "-" + Dni + "-" + to_string(Fila) + "-" + Asiento;
 }
 
 void cCodigoPasaje::Set_Asiento(char aciento)
@@ -21,9 +27,9 @@ void cCodigoPasaje::Set_Asiento(char aciento)
 	Asiento = aciento;
 }
 
-string cCodigoPasaje::To_StringCodigo()
+const string cCodigoPasaje::Get_Dni()
 {
-	return Tipo + "-" + Dni + "-" + to_string(Fila) + "-" + Asiento;
+	return Dni;
 }
 
 cCodigoPasaje::~cCodigoPasaje()
