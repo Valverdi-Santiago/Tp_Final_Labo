@@ -14,11 +14,14 @@ cPersona::cPersona(string nombre, const string dni, cCodigoPasaje *codigodelpasa
 cPersona::cPersona(cPersona & p) :DNI(p.DNI)
 {
 	Nombre = p.Nombre;
+	Estado = p.Estado;
 	if (p.CodigoDePasaje->Get_Dni() == DNI)
 		CodigoDePasaje = p.CodigoDePasaje;
 	else
 		CodigoDePasaje = NULL;
 }
+
+
 
 const string cPersona::Get_DNI()
 {

@@ -7,6 +7,22 @@ cAzafata::cAzafata(string nombre, const string dni, cCodigoPasaje *codigodelpasa
 	Ocupada_Libre = false;
 }
 
+void cAzafata::Entregar_Alimento()
+{
+}
+
+void cAzafata::Atender_Pasajero()
+{
+}
+
+void cAzafata::Atender_Piloto()
+{
+}
+
+void cAzafata::Auxiliar_Pasajero()
+{
+}
+
 
 cAzafata::~cAzafata()
 {

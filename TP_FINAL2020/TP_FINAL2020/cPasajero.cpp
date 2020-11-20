@@ -7,6 +7,11 @@ cPasajero::cPasajero(string nombre, const string dni, cCodigoPasaje *codigodelpa
 }
 
 
+void cPasajero::Set_Estado(bool Estado)
+{
+	this->Estado = Estado;
+}
+
 void cPasajero::Banio()
 {
 	cout << "" << this->Nombre << " va al banio." << endl;

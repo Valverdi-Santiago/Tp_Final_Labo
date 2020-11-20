@@ -7,9 +7,10 @@ using namespace std;
 
 class cPasajero : public cPersona
 {
-
+	bool Estado;
 public:
 	cPasajero(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
+	void Set_Estado(bool Estado);
 
 
 	//void Llevados_Avion(); //ver si va aca o en avion

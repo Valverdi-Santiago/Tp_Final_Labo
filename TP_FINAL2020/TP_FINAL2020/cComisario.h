@@ -1,5 +1,7 @@
 #pragma once
+#include <iostream>
 #include "cPersona.h"
+
 #include "cPasajero.h" //VER SI VA
 using namespace std;
 
