@@ -19,6 +19,10 @@ const string cPersona::Get_DNI()
 	return DNI;
 }
 
+string cPersona::To_String() //VER SI EL /N ESTA BIEN
+{
+	return "Nombre: " + Nombre + "  DNI: " + DNI + "/nCodigo de pasaje: " + this->CodigoDePasaje->To_StringCodigo();
+}
 
 cPersona::~cPersona()
 {

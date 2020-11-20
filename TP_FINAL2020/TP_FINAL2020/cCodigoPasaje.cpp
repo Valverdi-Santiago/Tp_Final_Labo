@@ -16,10 +16,14 @@ cCodigoPasaje::cCodigoPasaje(string tipo, const string dni, int fila, char asien
 	Asiento = asiento;
 }
 
-
 void cCodigoPasaje::Set_Asiento(char aciento)
 {
 	Asiento = aciento;
+}
+
+string cCodigoPasaje::To_StringCodigo() //VER SI LO TOMA BIEN
+{
+	return Tipo + "-" + Dni + "-" + to_string(Fila) + "-" + Asiento;
 }
 
 cCodigoPasaje::~cCodigoPasaje()
