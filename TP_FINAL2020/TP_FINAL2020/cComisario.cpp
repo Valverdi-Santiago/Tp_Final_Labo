@@ -8,7 +8,7 @@ cComisario::cComisario(string nombre, const string dni, cCodigoPasaje *codigodel
 
 void cComisario::Reduce(cPasajero* p)
 {
-	cout << "Reduciendo pasajero" << endl;
+	cout << "Reduciendo a pasajero "<< this->Nombre << endl;
 	p->Set_Estado(true);
 	Encerrar(p);
 }
