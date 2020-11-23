@@ -12,6 +12,17 @@ void cPasajero::Set_Estado(bool Estado)
 	this->Estado = Estado;
 }
 
+void cPasajero::Perdir_Alimento(cAzafata* a)
+{ 
+	cPersona* aux;
+
+	int menu;
+	srand(time_t(NULL));
+	menu=rand() % 10;
+	
+	a->Entregar_Alimento( menu, this);
+}
+
 void cPasajero::Banio()
 {
 	cout << "" << this->Nombre << " va al banio." << endl;

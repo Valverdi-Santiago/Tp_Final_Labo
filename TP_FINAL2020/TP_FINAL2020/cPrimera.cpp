@@ -15,7 +15,7 @@ void cPrimera::Tomar_Alcohol()
 {
 	cout << "" << this->Nombre << " esta tomando alcohol." << endl;
 }
-}
+
 
 
 cPrimera::~cPrimera()

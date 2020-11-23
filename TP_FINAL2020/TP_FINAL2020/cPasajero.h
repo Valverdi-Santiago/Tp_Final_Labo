@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include "cPersona.h"
+#include "cAzafata.h"
+//class cAzafata;
 //#include "cAzafata.h" //VER SI VA
 using namespace std;
 
@@ -14,7 +16,7 @@ public:
 
 
 	//void Llevados_Avion(); //ver si va aca o en avion
-	//void Perdir_Alimento(cAzafata *a);
+	void Perdir_Alimento(cAzafata *a);
 	void Banio();
 	void Dormir();
 	//void Llamar_Azafata();

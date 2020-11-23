@@ -1,5 +1,7 @@
 #pragma once
 #include "cPersona.h"
+#include <iostream>
+
 using namespace std;
 
 
@@ -11,10 +13,11 @@ private:
 public:
 	cAzafata(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 
-	void Entregar_Alimento();
-	void Atender_Pasajero();
-	void Atender_Piloto();
-	void Auxiliar_Pasajero();
+	void Entregar_Alimento(int menu, cPersona* persona);
+	void Atender_Pasajero(cPersona* persona);
+	void Atender_Piloto(cPersona* persona);
+	void Mensaje_Del_Piloto(string Mensaje);
+	void Auxiliar_Pasajero(cPersona* persona);
 
 	~cAzafata();
 };

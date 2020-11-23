@@ -7,12 +7,12 @@ class cPersona
 {
 protected:
 	string Nombre;
-	const string DNI;
 	cCodigoPasaje *CodigoDePasaje;
 	bool Estado;
 
 
 public:
+	const string DNI;
 
 
 	cPersona();
