@@ -23,16 +23,22 @@ void cPasajero::Perdir_Alimento(cAzafata* a)
 	
 	if(a->Atender_Pasajero(this)==true)
 		a->Entregar_Alimento( menu, this);
+	Mensaje.AgregarItem(new Log("Pasajero pidiendo alimento"));
+
 }
 
 void cPasajero::Banio()
 {
 	cout << "" << this->Nombre << " va al banio." << endl;
 	this->Volver_Asiento();
+	Mensaje.AgregarItem(new Log("Pasajero va al banio"));
+
 }
 
 void cPasajero::Dormir()
 {
+	Mensaje.AgregarItem(new Log("Pasajero duerme"));
+
 	cout << "" << this->Nombre << " duerme." << endl;
 }
 

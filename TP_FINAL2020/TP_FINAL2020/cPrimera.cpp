@@ -8,12 +8,16 @@ cPrimera::cPrimera(string nombre, const string dni, cCodigoPasaje *codigodelpasa
 
 void cPrimera::Masajes()
 {
+	Mensaje.AgregarItem(new Log("Pasajero primera clase haciendose masajes"));
+
 	cout << "" << this->Nombre << " se esta haciendo masajes." << endl;
 }
 
 void cPrimera::Tomar_Alcohol()
 {
-	cout << "" << this->Nombre << " esta tomando alcohol." << endl;
+	Mensaje.AgregarItem(new Log("Primera clase bebiendo alcohol"));
+
+	cout << "" << this->Nombre << " esta bebiendo alcohol." << endl;
 }
 
 

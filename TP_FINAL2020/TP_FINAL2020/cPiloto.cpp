@@ -7,23 +7,33 @@ cPiloto::cPiloto(string nombre, const string dni, cCodigoPasaje *codigodelpasaje
 }
 
 void cPiloto::Pilotear()
-{
+{	
+	Mensaje.AgregarItem(new Log("Pilotando avion"));
+
 	cout << "El piloto " << this->Nombre << " esta piloteando el avion." << endl;
 }
 
 void cPiloto::Anunciar()
 {
+	Mensaje.AgregarItem(new Log("Piloto anunciando"));
+
 	cout << "Buenas pasajeros soy el piloto y les deseo un buen vuelo." << endl;
 }
 
 void cPiloto::Pedir_Comida(cAzafata * a)
 {
 	if (a->Atender_Piloto(this) == true)
+	{
 		a->Set_Libre(true);
+		Mensaje.AgregarItem(new Log("Piloto Pide comida"));
+
+	}
 }
 
 void cPiloto::Anuncio_Azafata(cAzafata * a)
 {
+	Mensaje.AgregarItem(new Log("Piloto pide que la azafata anuncie"));
+
 	a->Mensaje_Del_Piloto("Tomen asiento por favor.");
 }
 
