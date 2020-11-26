@@ -18,14 +18,5 @@ public:
 	}
 	string getclave() { return descripcion; }
 	Log(string descripcion, time_t Timestamp = time(0));
+
 };
-
-
-
-/*
-* Herencia protected
-clase padre -> clase derivada
-private -> privado
-protected -> protected (puedo acceder)
-public -> protected
-*/
