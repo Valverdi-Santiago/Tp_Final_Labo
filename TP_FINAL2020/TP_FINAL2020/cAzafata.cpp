@@ -15,7 +15,7 @@ void cAzafata::Set_Libre(bool libre)
 void cAzafata::Entregar_Alimento(int menu,cPersona * persona)
 {
 	cout << "Entregando menu numero: "<< menu << endl;
-	cout << "A la persona con dni numero:" << persona->DNI << endl;
+	cout << "A la persona con dni numero:" << persona->Get_DNI() << endl;
 	Ocupada_Libre = true;
 }
 
@@ -23,7 +23,7 @@ bool cAzafata::Atender_Pasajero(cPersona * persona)
 {
 	if (Ocupada_Libre == true)
 	{
-		cout << "Atendiendo al pasajero: " << persona->DNI << endl;
+		cout << "Atendiendo al pasajero: " << persona->Get_DNI() << endl;
 		Ocupada_Libre = false;
 		return true;
 	}
@@ -34,7 +34,7 @@ bool cAzafata::Atender_Piloto(cPersona* persona)
 {
 	if (Ocupada_Libre == true)
 	{
-		cout << "Atendiendo al piloto: " << persona->DNI << endl;
+		cout << "Atendiendo al piloto: " << persona->Get_DNI() << endl;
 		Ocupada_Libre = false;
 		return true;
 	}
@@ -44,7 +44,7 @@ bool cAzafata::Atender_Piloto(cPersona* persona)
 void cAzafata::Auxiliar_Pasajero(cPersona* persona)
 {
 	if (Ocupada_Libre == true)
-		cout << "Auxiliando al pasajero con el dni:" << persona->DNI << endl;
+		cout << "Auxiliando al pasajero con el dni:" << persona->Get_DNI() << endl;
 }
 void cAzafata::Mensaje_Del_Piloto(string Mensaje)
 {
