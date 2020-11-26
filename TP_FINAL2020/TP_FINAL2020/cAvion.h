@@ -3,28 +3,30 @@
 #include <iostream>
 #include "cCodigoPasaje.h"
 #include "cPersona.h"
-#include "cComisario.h"//VER SI VA
+#include "cLista.h"
+#include "cComisario.h"
+#define NMAX 10
+
 using namespace std;
 
-//AGREGAR LISTA PERSONA Y LISTA CODIGOPASAJE
+//HACER LISTA DE CODIGOS RANDON
 
 class cAvion
 {
 private:
-	int Cantidad_Pasajeros;
-	int Cantidad_Tripulantes;
+	cLista<cCodigoPasaje>*ListaCodigosPasajes = new cLista<cCodigoPasaje>(NMAX);
+	cLista<cPersona>*ListaPersonas = new cLista<cPersona>(NMAX);
 
 public:
 	cAvion();
-	cAvion(int cantidad_pasajeros, int cantidad_tripulantes);
 
 	void Listar_Eventos();
 	void Registro_Tripulantes(cPersona *p);
 	void AsignarAciento_Comisario(cComisario *c);
 	void Verificar_Codigo(cCodigoPasaje *c);
 
-	int Get_CantidadPasajeros();
+	unsigned int Get_CantidadPersonasAbordo();
+
 
 	~cAvion();
 };
-
