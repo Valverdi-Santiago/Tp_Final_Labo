@@ -7,6 +7,8 @@ using namespace std;
 
 class Logger : protected cLista<Log>
 {
+	unsigned int CA=0;
+
 public:
 	//Agregar
 	//Listar
@@ -24,8 +26,14 @@ public:
 		AgregarItem(new Log(descripcion));
 	}
 	void Listar() {
-		for (int i = 0; i < CA; ++i)
+		for (int i = 0; i <= CA; ++i)
 			cout << vector[i]->to_string() << endl;
 	}
-
+	bool AgregarItem(Log *log)
+	{
+		if (CA < NMAX)
+			vector[CA++] = log;
+		else throw new exception("No hay tamanio suficiente para agregar el item");;
+		return true;
+	}
 };

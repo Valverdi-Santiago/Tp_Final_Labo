@@ -1,5 +1,7 @@
 #pragma once
+
 //#include <string>  
+#include "Logger.h"
 #include "cCodigoPasaje.h"
 using namespace std;
 
