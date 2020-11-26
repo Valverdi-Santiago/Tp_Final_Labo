@@ -8,14 +8,15 @@ using namespace std;
 class cAzafata : public cPersona
 {
 private:
-	bool Ocupada_Libre; //VER SI LO DEJAMOS
+	bool Ocupada_Libre; // true= libre, false= ocupada
 
 public:
 	cAzafata(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
+	void Set_Libre(bool libre);
 
 	void Entregar_Alimento(int menu, cPersona* persona);
-	void Atender_Pasajero(cPersona* persona);
-	void Atender_Piloto(cPersona* persona);
+	bool Atender_Pasajero(cPersona* persona);
+	bool Atender_Piloto(cPersona* persona);
 	void Mensaje_Del_Piloto(string Mensaje);
 	void Auxiliar_Pasajero(cPersona* persona);
 

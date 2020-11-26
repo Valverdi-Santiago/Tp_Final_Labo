@@ -1,8 +1,7 @@
 #pragma once
 #include <iostream>
 #include "cPersona.h"
-
-#include "cPasajero.h" //VER SI VA
+#include "cPasajero.h" 
 using namespace std;
 
 
