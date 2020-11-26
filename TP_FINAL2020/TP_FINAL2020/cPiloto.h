@@ -9,7 +9,7 @@ class cPiloto : public cPersona
 {
 
 public:
-	cPiloto(string nombre, const string dni, cCodigoPasaje* codigodelpasaje) {};
+	cPiloto(string nombre, const string dni, cCodigoPasaje* codigodelpasaje);
 
 	void Pilotear();
 	void Anunciar();
