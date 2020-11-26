@@ -21,7 +21,8 @@ void cPasajero::Perdir_Alimento(cAzafata* a)
 	srand(time_t(NULL));
 	menu=rand() % 10;
 	
-	a->Entregar_Alimento( menu, this);
+	if(a->Atender_Pasajero(this)==true)
+		a->Entregar_Alimento( menu, this);
 }
 
 void cPasajero::Banio()
@@ -33,6 +34,11 @@ void cPasajero::Banio()
 void cPasajero::Dormir()
 {
 	cout << "" << this->Nombre << " duerme." << endl;
+}
+
+void cPasajero::Llamar_Azafata(cAzafata * a)
+{
+	a->Atender_Pasajero(this);
 }
 
 

@@ -2,6 +2,13 @@
 
 
 
+cPersona::cPersona(): DNI(" ")
+{
+	Nombre = " ";
+	CodigoDePasaje = NULL;
+	Estado = false;
+}
+
 cPersona::cPersona(string nombre, const string dni, cCodigoPasaje *codigodelpasaje) :DNI(dni)
 {
 	Nombre = nombre;

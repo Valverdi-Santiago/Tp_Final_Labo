@@ -19,7 +19,7 @@ public:
 	void Perdir_Alimento(cAzafata *a);
 	void Banio();
 	void Dormir();
-	//void Llamar_Azafata();
+	void Llamar_Azafata(cAzafata *a);
 	void Volver_Asiento();
 
 	~cPasajero();
