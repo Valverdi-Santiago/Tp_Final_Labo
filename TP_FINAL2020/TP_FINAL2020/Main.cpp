@@ -6,7 +6,7 @@
 #include "cPiloto.h"
 #include "cPrimera.h"
 #include "cTurista.h"
-
+#define MAX 10
 
 int main()
 {
@@ -19,9 +19,9 @@ int main()
 	cAvion *avion = new cAvion();
 	
 	cPasajero *primera= new cPrimera("Juan", "23456456", new cCodigoPasaje("TU", "23456456", 05, 'F'));
-	cAzafata *azafata = new cAzafata("Victoria", "45345345", new cCodigoPasaje("AZ", "45345345", 03, 'A'));
-	cPrimera *primeraclase = new cPrimera("Maria", "43234789", new cCodigoPasaje("PC", "43234789", 01, 'B'));
-	cTurista *turista = new cTurista("Jorge", "13345345", new cCodigoPasaje("BS", "13345345", 12, 'C'));
+	cPersona *azafata = new cAzafata("Victoria", "45345345", new cCodigoPasaje("AZ", "45345345", 03, 'A'));
+	cPasajero *primeraclase = new cPrimera("Maria", "43234789", new cCodigoPasaje("PC", "43234789", 01, 'B'));
+	cPasajero *turista = new cTurista("Jorge", "13345345", new cCodigoPasaje("BS", "13345345", 12, 'C'));
 	cComisario *comisario = new cComisario("Eduardo", "13456567", new cCodigoPasaje("CO", "13456567", 03, 'D'));
 
 	//avion->Verificar_Codigo(piloto);
@@ -32,7 +32,7 @@ int main()
 	avion->AsignarAciento_Comisario(comisario);
 
 	
-
+	avion->ListaPersonas->Listar();
 
 	delete avion;
 	system("pause");

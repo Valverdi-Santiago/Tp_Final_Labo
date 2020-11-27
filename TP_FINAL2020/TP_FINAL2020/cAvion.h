@@ -14,10 +14,12 @@ using namespace std;
 class cAvion
 {
 private:
-	cLista<cCodigoPasaje>*ListaCodigosPasajes = new cLista<cCodigoPasaje>(NMAX);
-	cLista<cPersona>*ListaPersonas = new cLista<cPersona>(NMAX);
+	cLista<cCodigoPasaje>* ListaCodigosPasajes;
+	
 
 public:
+	cLista<cPersona>* ListaPersonas;
+
 	cAvion();
 
 	void Registro_Tripulantes(cPersona *p);
@@ -25,7 +27,7 @@ public:
 	void Verificar_Codigo(cPersona *Persona);
 
 	unsigned int Get_CantidadPersonasAbordo();
-
+	//void Imprimir_ListaPasajeros();
 
 	~cAvion();
 };

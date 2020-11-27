@@ -19,6 +19,7 @@ public:
 
 	const string Get_DNI();
 	string To_String();
+	void Imprimir();
 
 	~cPersona();
 };

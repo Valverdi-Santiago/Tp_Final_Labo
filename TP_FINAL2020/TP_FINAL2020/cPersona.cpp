@@ -43,6 +43,11 @@ string cPersona::To_String()
 		return "Nombre: " + Nombre + "  DNI: " + DNI + "\nCodigo de pasaje: No tiene.";
 }
 
+void cPersona::Imprimir()
+{
+	cout << this->To_String() << endl;
+}
+
 
 cPersona::~cPersona()
 {
