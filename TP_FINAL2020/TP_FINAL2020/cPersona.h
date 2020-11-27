@@ -14,7 +14,7 @@ protected:
 	const string DNI;
 
 public:
-	Logger Mensaje
+	Logger Mensaje;
 	cPersona();
 	cPersona(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 	cPersona(cPersona &p);

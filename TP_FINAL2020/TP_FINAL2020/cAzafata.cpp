@@ -39,7 +39,7 @@ bool cAzafata::Atender_Piloto(cPersona* persona)
 	if (Ocupada_Libre == true)
 	{
 		Mensaje.AgregarItem(new Log("Atendiendo Piloto"));
-
+		
 		cout << "Atendiendo al piloto: " << persona->Get_DNI() << endl;
 		Ocupada_Libre = false;
 		return true;
