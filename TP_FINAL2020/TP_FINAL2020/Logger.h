@@ -26,7 +26,7 @@ public:
 		AgregarItem(new Log(descripcion));
 	}
 	void Listar() {
-		for (int i = 0; i <= CA; ++i)
+		for (unsigned int i = 0; i <= CA; ++i)
 			cout << vector[i]->to_string() << endl;
 	}
 	bool AgregarItem(Log *log)
