@@ -9,7 +9,6 @@
 
 using namespace std;
 
-//HACER LISTA DE CODIGOS RANDON
 
 class cAvion
 {
@@ -20,10 +19,10 @@ private:
 public:
 	cAvion();
 
-	void Listar_Eventos();
-	void Registro_Tripulantes(cPersona *p);
+	
+	void Registro_Tripulantes(cPersona *c);
 	void AsignarAciento_Comisario(cComisario *c);
-	void Verificar_Codigo(cCodigoPasaje *c);
+	void Verificar_Codigo(cPersona *c);
 
 	unsigned int Get_CantidadPersonasAbordo();
 

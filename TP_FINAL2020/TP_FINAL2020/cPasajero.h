@@ -2,8 +2,6 @@
 #include <iostream>
 #include "cPersona.h"
 #include "cAzafata.h"
-//class cAzafata;
-//#include "cAzafata.h" //VER SI VA
 using namespace std;
 
 
