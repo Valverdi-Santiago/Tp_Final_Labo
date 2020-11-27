@@ -173,7 +173,7 @@ T* cLista<T>::BuscarItem(string clave)
 {
 	for (unsigned int i = 0; i < CA; i++)
 	{
-		if (vector[i]->getclave() == clave)
+		if (vector[i]->Get_Dni() == clave)
 			return vector[i];
 	}
 	return NULL;
@@ -191,7 +191,7 @@ unsigned int cLista<T>::getItemPos(string clave)
 {
 	for (unsigned int i = 0; i < CA; i++)
 	{
-		if (vector[i]->getclave() == clave)
+		if (vector[i]->Get_Dni() == clave)
 			return i;
 	}
 

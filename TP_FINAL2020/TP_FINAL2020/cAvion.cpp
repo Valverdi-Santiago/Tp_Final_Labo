@@ -46,7 +46,7 @@ void cAvion::AsignarAciento_Comisario(cComisario * Persona)//RESERVA EL ASIENTO 
 
 void cAvion::Verificar_Codigo(cPersona* Persona)
 {
-	for (int i = 0; i < ListaCodigosPasajes->getCA(); i++)
+	for (unsigned int i = 0; i < ListaCodigosPasajes->getCA(); i++)
 	{
 		cCodigoPasaje* aux = ListaCodigosPasajes[i].BuscarItem(Persona->Get_DNI());
 		if (aux != NULL)
