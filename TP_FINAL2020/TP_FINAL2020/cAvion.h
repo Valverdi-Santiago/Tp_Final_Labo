@@ -20,10 +20,10 @@ private:
 public:
 	cAvion();
 
-	void Listar_Eventos();
+	//void Listar_Eventos();
 	void Registro_Tripulantes(cPersona *p);
-	void AsignarAciento_Comisario(cComisario *c);
-	void Verificar_Codigo(cCodigoPasaje *c);
+	void AsignarAciento_Comisario(cComisario *Persona);
+	void Verificar_Codigo(cPersona *Persona);
 
 	unsigned int Get_CantidadPersonasAbordo();
 
