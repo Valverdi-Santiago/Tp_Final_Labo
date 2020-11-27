@@ -10,9 +10,7 @@ class Logger : protected cLista<Log>
 	unsigned int CA=0;
 
 public:
-	//Agregar
-	//Listar
-	//Guardar_archivo xxxx.log
+
 	Logger(int Nmax = NMAX);
 	virtual ~Logger() {
 

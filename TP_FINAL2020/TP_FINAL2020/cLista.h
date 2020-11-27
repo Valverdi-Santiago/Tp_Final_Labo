@@ -98,12 +98,12 @@ template<class T>
 bool cLista<T>::AgregarItem(T* item)
 {
 
-	T* i_f = BuscarItem(item->getclave());
-	if (i_f != NULL)throw new exception("Ya se encuentra en la lista");
+	//T* i_f = BuscarItem(item->getclave());
+	//if (i_f != NULL)throw new exception("Ya se encuentra en la lista");
 
 	if (CA < TAM)
 		vector[CA++] = item;
-	else throw new exception("No hay tama�o suficiente para agregar el item");;
+	//else throw new exception("No hay tama�o suficiente para agregar el item");;
 	return true;
 }
 template<class T>

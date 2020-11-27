@@ -4,6 +4,55 @@
 
 cAvion::cAvion()
 {
+	int Num,Num2;
+	srand(time_t(NULL));
+	for (int i = 0; i < 10; i++)
+	{
+		Num = rand() % 100;
+		Num2 = rand() % 10;
+		if (Num < 19)//primera clase
+		{
+			//ListaCodigosPasajes->BuscarItem( cCodigoPasaje("Num2"));
+			ListaCodigosPasajes->AgregarItem(new cCodigoPasaje("PC", "dni", Num, Num2));
+			break;
+		}
+		if (Num < 49)// clase ejecutiva
+		{
+
+			ListaCodigosPasajes->AgregarItem(new cCodigoPasaje("BS", "dni", Num, Num2));
+
+		}
+		if (Num <99)//clase turista
+		{
+
+			ListaCodigosPasajes->AgregarItem(new cCodigoPasaje("TU", "dni", Num, Num2));
+
+		}
+	
+	}
+
+
+}
+
+void cAvion::Registro_Tripulantes(cPersona* persona)
+{
+	ListaPersonas->AgregarItem(persona);
+
+}
+
+void cAvion::AsignarAciento_Comisario(cComisario* c)
+{
+}
+
+void cAvion::Verificar_Codigo(cPersona* Persona)
+{
+	for (int i = 0; i < ListaCodigosPasajes->getCA(); i++)
+	{
+		cCodigoPasaje* aux = ListaCodigosPasajes[i].BuscarItem(Persona->Get_DNI());
+		if (aux != NULL)
+			Registro_Tripulantes(Persona);
+
+	}
 }
 
 

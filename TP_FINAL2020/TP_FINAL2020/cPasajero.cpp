@@ -15,8 +15,7 @@ void cPasajero::Set_Estado(bool Estado)
 
 void cPasajero::Perdir_Alimento(cAzafata* a)
 { 
-	cPersona* aux;
-
+	
 	int menu;
 	srand(time_t(NULL));
 	menu=rand() % 10;
