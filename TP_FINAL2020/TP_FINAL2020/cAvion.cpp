@@ -39,6 +39,11 @@ void cAvion::Registro_Tripulantes(cPersona* persona)
 
 }
 
+void cAvion::AsignarAciento_Comisario(cComisario * Persona)//RESERVA EL ASIENTO 01 PARA EL COMISARIO SIEMPRE
+{
+	Persona->Set_Asiento('A');
+}
+
 void cAvion::Verificar_Codigo(cPersona* Persona)
 {
 	for (int i = 0; i < ListaCodigosPasajes->getCA(); i++)

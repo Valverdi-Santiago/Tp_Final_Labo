@@ -14,6 +14,8 @@ public:
 	void Reduce(cPasajero *p);
 	void Encerrar(cPasajero *p);
 
+	void Set_Asiento(char asiento);
+
 	~cComisario();
 };
 

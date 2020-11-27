@@ -22,6 +22,11 @@ void cComisario::Encerrar(cPasajero* p)
 	cout << "Encerrando Pasajero" << endl;
 }
 
+void cComisario::Set_Asiento(char asiento)
+{
+	this->CodigoDePasaje->Set_Asiento(asiento);
+}
+
 
 cComisario::~cComisario()
 {

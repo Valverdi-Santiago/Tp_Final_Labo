@@ -3,7 +3,9 @@
 #include "cAvion.h"
 #include "cCodigoPasaje.h"
 #include "cPersona.h"
-
+#include "cPiloto.h"
+#include "cPrimera.h"
+#include "cTurista.h"
 
 
 int main()
@@ -16,16 +18,18 @@ int main()
 
 	cAvion *avion = new cAvion();
 	
-	cPersona *persona1 = new cPersona("Juan", "23456456", new cCodigoPasaje("TU", "23456456", 05, 'F'));
-	cPersona *persona2 = new cPersona("Victoria", "45345345", new cCodigoPasaje("BS", "45345345", 03, 'A'));
-	cPersona *persona3 = new cPersona("Maria", "43234789", new cCodigoPasaje("PC", "43234789", 01, 'B'));
-	cPersona *persona4 = new cPersona("Jorge", "13345345", new cCodigoPasaje("BS", "13345345", 12, 'C'));
+	cPiloto *piloto = new cPiloto("Juan", "23456456", new cCodigoPasaje("TU", "23456456", 05, 'F'));
+	cAzafata *azafata = new cAzafata("Victoria", "45345345", new cCodigoPasaje("AZ", "45345345", 03, 'A'));
+	cPrimera *primeraclase = new cPrimera("Maria", "43234789", new cCodigoPasaje("PC", "43234789", 01, 'B'));
+	cTurista *turista = new cTurista("Jorge", "13345345", new cCodigoPasaje("BS", "13345345", 12, 'C'));
+	cComisario *comisario = new cComisario("Eduardo", "13456567", new cCodigoPasaje("CO", "13456567", 03, 'D');
 
-	avion->Verificar_Codigo(persona1);
-	avion->Verificar_Codigo(persona2);
-	avion->Verificar_Codigo(persona3);
-	avion->Verificar_Codigo(persona4);
-	avion->Verificar_Codigo(persona1);//NO LA DEBERIA DE AGREGAR
+	avion->Verificar_Codigo(piloto);
+	avion->Verificar_Codigo(azafata);
+	avion->Verificar_Codigo(primeraclase);
+	avion->Verificar_Codigo(turista);
+	avion->Verificar_Codigo(azafata);//NO LA DEBERIA DE AGREGAR
+	avion->AsignarAciento_Comisario(comisario);
 
 	
 
