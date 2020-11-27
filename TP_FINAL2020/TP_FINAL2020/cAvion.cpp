@@ -25,12 +25,11 @@ cAvion::cAvion()
 		if (Num <99)//clase turista
 		{
 
-			ListaCodigosPasajes->AgregarItem(new cCodigoPasaje("TU", "dni", Num, Num2));
+			ListaCodigosPasajes->AgregarItem(new cCodigoPasaje("TU", "dni", Num, Num2));//NO DEJA HACER ESTO PORQUE EL NUM2 DEBERIA DE SER UN CHAR
 
 		}
 	
 	}
-
 
 }
 
@@ -38,10 +37,6 @@ void cAvion::Registro_Tripulantes(cPersona* persona)
 {
 	ListaPersonas->AgregarItem(persona);
 
-}
-
-void cAvion::AsignarAciento_Comisario(cComisario* c)
-{
 }
 
 void cAvion::Verificar_Codigo(cPersona* Persona)
@@ -55,24 +50,6 @@ void cAvion::Verificar_Codigo(cPersona* Persona)
 	}
 }
 
-
-
-void cAvion::Registro_Tripulantes(cPersona *c)
-{
-	ListaPersonas->AgregarItem(c);
-	
-}
-
-
-void cAvion::Verificar_Codigo(cPersona *c)
-{
-	for (int i = 0; i < ListaCodigosPasajes->getCA(); i++)
-	{
-		cCodigoPasaje *aux = ListaCodigosPasajes[i].BuscarItem(c->Get_DNI());
-		if (aux != NULL)
-			Registro_Tripulantes(c);
-	}
-}
 
 unsigned int cAvion::Get_CantidadPersonasAbordo()
 {
