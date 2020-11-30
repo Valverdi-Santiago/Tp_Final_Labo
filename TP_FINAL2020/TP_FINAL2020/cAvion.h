@@ -5,17 +5,16 @@
 #include "cPersona.h"
 #include "cLista.h"
 #include "cComisario.h"
+#include "Logger.h"
 #define NMAX 10
 
 using namespace std;
-
-//HACER LISTA DE CODIGOS RANDON
 
 class cAvion
 {
 private:
 	cLista<cCodigoPasaje>* ListaCodigosPasajes;
-	
+	static Logger logger;
 
 public:
 	cLista<cPersona>* ListaPersonas;
