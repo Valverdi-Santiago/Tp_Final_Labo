@@ -8,7 +8,7 @@ cEjecutiva::cEjecutiva(string nombre, const string dni, cCodigoPasaje *codigodel
 
 void cEjecutiva::Trabajar()
 {
-	Mensaje.AgregarItem(new Log("Pasajero Clase Ejecutiva Trabajando"));
+	cAvion::logger.AgregarItem(new Log("Pasajero Clase Ejecutiva Trabajando"));
 
 	cout << "" << this->Nombre << " esta trabajando." << endl;
 }

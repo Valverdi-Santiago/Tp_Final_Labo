@@ -14,8 +14,9 @@ cAvion::cAvion()
 	aux = ListaCodigosPasajes[4].AgregarItem(new cCodigoPasaje("BS", "13345345", 12, 'C'));
 	aux = ListaCodigosPasajes[5].AgregarItem(new cCodigoPasaje("CO", "13456567", 03, 'D'));
 	aux = ListaCodigosPasajes[6].AgregarItem(new cCodigoPasaje("TU", "13453635", 12, 'A'));//NO DEBERIA DE AGREGARLO A LA LISTA PERSONAS
-
-	logger.AgregarItem(); 
+	//Logger logger();
+	
+	//logger.AgregarItem(); 
 	/*int Num,Num2;
 	srand(time_t(NULL));
 	for (int i = 0; i < 10; i++)

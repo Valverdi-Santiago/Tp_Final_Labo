@@ -14,10 +14,10 @@ class cAvion
 {
 private:
 	cLista<cCodigoPasaje>* ListaCodigosPasajes;
-	static Logger logger;
 
 public:
 	cLista<cPersona>* ListaPersonas;
+	static Logger logger;
 
 	cAvion();
 

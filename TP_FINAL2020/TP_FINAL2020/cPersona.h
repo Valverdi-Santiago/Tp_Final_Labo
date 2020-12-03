@@ -1,4 +1,5 @@
 #pragma once 
+#include "cAvion.h"
 #include "Logger.h"
 #include "cCodigoPasaje.h"
 using namespace std;
@@ -12,7 +13,7 @@ protected:
 	const string DNI;
 
 public:
-	Logger Mensaje;
+	
 	cPersona();
 	cPersona(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 	cPersona(cPersona &p);
