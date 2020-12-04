@@ -9,7 +9,7 @@
 #define NMAX 10
 
 using namespace std;
-
+class cComisario; //LO AGREGUE PORQUE NO LA DEFINIA
 
 class cAvion
 {
@@ -23,8 +23,8 @@ public:
 	cAvion();
 
 	void Registro_Tripulantes(cPersona *p);
-	void AsignarAciento_Comisario(cComisario *Persona);
-	void Verificar_Codigo(cPersona *Persona);
+	void AsignarAciento_Comisario(cComisario *p);
+	void Verificar_Codigo(cPersona *p);
 
 	unsigned int Get_CantidadPersonasAbordo();
 

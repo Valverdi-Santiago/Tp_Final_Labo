@@ -28,8 +28,6 @@ cPersona::cPersona(cPersona & p) :DNI(p.DNI)
 		CodigoDePasaje = NULL;
 }
 
-
-
 const string cPersona::getclave()
 {
 	return DNI;
@@ -43,12 +41,12 @@ string cPersona::To_String()
 		return "Nombre: " + Nombre + "  DNI: " + DNI + "\nCodigo de pasaje: No tiene.";
 }
 
-void cPersona::Imprimir()
+void cPersona::Imprimir() 
 {
 	cout << this->To_String() << endl << endl;
 }
 
-
 cPersona::~cPersona()
 {
 }
+

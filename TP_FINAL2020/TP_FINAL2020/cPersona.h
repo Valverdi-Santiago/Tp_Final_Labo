@@ -1,7 +1,5 @@
 #pragma once 
-//#pragma warning 
-#include "cAvion.h"
-#include "Logger.h"
+#include <iostream>
 #include "cCodigoPasaje.h"
 using namespace std;
 

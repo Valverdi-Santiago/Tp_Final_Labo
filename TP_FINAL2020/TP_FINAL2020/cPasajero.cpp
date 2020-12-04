@@ -15,15 +15,16 @@ void cPasajero::Set_Estado(bool Estado)
 
 void cPasajero::Perdir_Alimento(cPersona* a)
 { 
-	
+	cAzafata* azafata = dynamic_cast<cAzafata*>(a);
 	int menu;
 	srand(time_t(NULL));
 	menu=rand() % 10;
-	
-	if(a->Atender_Pasajero(this)==true)
-		a->Entregar_Alimento( menu, this);
-	Mensaje.AgregarItem(new Log("Pasajero pidiendo alimento"));
-
+	if (azafata != NULL) //PARA VER SI ES AZAFATA O NO
+	{
+		if (azafata->Atender_Pasajero(this) == true)
+			azafata->Entregar_Alimento(menu, this);
+		cAvion::logger.AgregarItem(new Log("Pasajero pidiendo alimento"));
+	}
 }
 
 void cPasajero::Banio()
@@ -31,7 +32,6 @@ void cPasajero::Banio()
 	cout << "" << this->Nombre << " va al banio." << endl;
 	this->Volver_Asiento();
 	cAvion::logger.AgregarItem(new Log("Pasajero va al banio"));
-
 }
 
 void cPasajero::Dormir()
@@ -44,14 +44,19 @@ void cPasajero::Dormir()
 void cPasajero::Llamar_Azafata(cPersona * a)
 {
 	cAzafata* azafata = dynamic_cast<cAzafata*>(a);
-	if(azafata!=NULL)
-		azafata->Atender_Pasajero(this);
+	if (azafata != NULL)
+	{
+		bool aux=azafata->Atender_Pasajero(this);
+		if (aux == false)
+			cAvion::logger.AgregarItem(new Log("LA azafata esta ocupada")); //verrrrrrrrrrrrr
+	}
 }
 
 
 void cPasajero::Volver_Asiento()
 {
 	cout << "" << this->Nombre << " vuelve al asiento." << endl;
+	cAvion::logger.AgregarItem(new Log("Pasajero volvio al asiento"));
 }
 
 cPasajero::~cPasajero()

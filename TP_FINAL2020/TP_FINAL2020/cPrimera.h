@@ -1,5 +1,6 @@
 #pragma once
 #include "cPasajero.h"
+#include "cAvion.h"
 using namespace std;
 
 class cPrimera : public cPasajero

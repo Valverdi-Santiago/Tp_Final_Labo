@@ -51,9 +51,8 @@ void cAzafata::Auxiliar_Pasajero(cPersona* persona)
 {
 	if (Ocupada_Libre == true)
 	{
-		cout << "Auxiliando al pasajero con el dni:" << persona->Get_DNI() << endl;
-		Mensaje.AgregarItem(new Log("Auxiliando Pasajero"));
-
+		cout << "Auxiliando al pasajero con el dni:" << persona->getclave() << endl;
+		cAvion::logger.AgregarItem(new Log("Auxiliando Pasajero"));
 	}
 }
 void cAzafata::Mensaje_Del_Piloto(string Mensaje)
@@ -61,7 +60,6 @@ void cAzafata::Mensaje_Del_Piloto(string Mensaje)
 	if (Ocupada_Libre == true)
 	{	cout << Mensaje << endl;
 	cAvion::logger.AgregarItem(new Log("Pasando Mensaje"));
-
 	}
 }
 

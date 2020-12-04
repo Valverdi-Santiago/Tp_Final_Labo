@@ -26,7 +26,6 @@ void cPiloto::Pedir_Comida(cAzafata * a)
 	{
 		a->Set_Libre(true);
 		cAvion::logger.AgregarItem(new Log("Piloto Pide comida"));
-
 	}
 }
 

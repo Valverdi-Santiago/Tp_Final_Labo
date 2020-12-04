@@ -8,13 +8,13 @@ cAvion::cAvion()
 	ListaPersonas = new cLista<cPersona>(NMAX);
 	bool aux;
 	aux=ListaCodigosPasajes[0].AgregarItem(new cCodigoPasaje("TU", "23456456", 05, 'F'));
-	aux = ListaCodigosPasajes[1].AgregarItem(new cCodigoPasaje("BS", "23456456", 06, 'J')); //NO DEBERIA DE AGREGARLO A LA LISTA PERSONAS
+	/*aux = ListaCodigosPasajes[1].AgregarItem(new cCodigoPasaje("BS", "23456456", 06, 'J')); //NO DEBERIA DE AGREGARLO A LA LISTA PERSONAS
 	aux = ListaCodigosPasajes[2].AgregarItem(new cCodigoPasaje("AZ", "45345345", 03, 'A'));
 	aux = ListaCodigosPasajes[3].AgregarItem(new cCodigoPasaje("PC", "43234789", 01, 'B'));
 	aux = ListaCodigosPasajes[4].AgregarItem(new cCodigoPasaje("BS", "13345345", 12, 'C'));
 	aux = ListaCodigosPasajes[5].AgregarItem(new cCodigoPasaje("CO", "13456567", 03, 'D'));
 	aux = ListaCodigosPasajes[6].AgregarItem(new cCodigoPasaje("TU", "13453635", 12, 'A'));//NO DEBERIA DE AGREGARLO A LA LISTA PERSONAS
-
+	*/
 	/*int Num,Num2;
 	srand(time_t(NULL));
 	for (int i = 0; i < 10; i++)
@@ -45,22 +45,22 @@ cAvion::cAvion()
 
 }
 
-void cAvion::Registro_Tripulantes(cPersona* persona)
+void cAvion::Registro_Tripulantes(cPersona* p)
 {
-	ListaPersonas->AgregarItem(persona);
+	ListaPersonas->AgregarItem(p);
 
 }
 
-void cAvion::AsignarAciento_Comisario(cComisario * Persona)//RESERVA EL ASIENTO 01 PARA EL COMISARIO SIEMPRE
+void cAvion::AsignarAciento_Comisario(cComisario * p)//RESERVA EL ASIENTO 'A' PARA EL COMISARIO SIEMPRE
 {
-	Persona->Set_Asiento('A');
+	p->Set_Asiento('A');
 }
 
-void cAvion::Verificar_Codigo(cPersona* Persona)
+void cAvion::Verificar_Codigo(cPersona* p)
 {
-	cCodigoPasaje* aux = ListaCodigosPasajes->BuscarItem(Persona->getclave());
+	cCodigoPasaje* aux = ListaCodigosPasajes->BuscarItem(p->getclave());
 	if (aux != NULL)
-		Registro_Tripulantes(Persona);
+		Registro_Tripulantes(p);
 }
 
 

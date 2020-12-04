@@ -2,6 +2,7 @@
 #include <iostream>
 #include "cPersona.h"
 #include "cAzafata.h" 
+#include "cAvion.h"
 using namespace std;
 
 

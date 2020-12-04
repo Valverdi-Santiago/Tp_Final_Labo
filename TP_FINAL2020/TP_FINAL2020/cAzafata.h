@@ -1,5 +1,6 @@
 #pragma once
 #include "cPersona.h"
+#include "cAvion.h"
 #include <iostream>
 
 using namespace std;

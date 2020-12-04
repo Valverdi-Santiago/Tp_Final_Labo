@@ -4,6 +4,7 @@
 #include "cPasajero.h" 
 using namespace std;
 
+class cPasajero; //LO AGREGUE PORQUE NO LA DEFINIA
 
 class cComisario : public cPersona
 {
