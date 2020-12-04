@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include "cPersona.h"
-#include "cAzafata.h" //VER SI VA
+#include "cAzafata.h" 
 using namespace std;
 
 

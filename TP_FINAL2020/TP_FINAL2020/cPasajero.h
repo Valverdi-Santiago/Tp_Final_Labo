@@ -4,7 +4,6 @@
 #include "cAzafata.h"
 using namespace std;
 
-
 class cPasajero : public cPersona
 {
 	bool Estado;

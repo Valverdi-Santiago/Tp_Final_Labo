@@ -40,7 +40,7 @@ int main()
 	turista->Perdir_Alimento(comisario); //NO LO DEBERIA DE HACER 
 	
 
-	//cAvion::logger.Listar();
+	cAvion::logger.Listar();
 
 	cout << "\n----------LOS PASAJEROS SON----------" << endl;
 	avion->ListaPersonas->Listar();

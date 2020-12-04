@@ -12,26 +12,10 @@ class Logger : protected cLista<Log>
 public:
 
 	Logger(int Nmax = NMAX);
-	virtual ~Logger() {
+	virtual ~Logger();
 
-	}
-
-	void Registrar(Log* log) {
-		AgregarItem(log);
-	}
-
-	void Registrar(string descripcion) {
-		AgregarItem(new Log(descripcion));
-	}
-	void Listar() {
-		for (unsigned int i = 0; i <= CA; ++i)
-			cout << vector[i]->to_string() << endl;
-	}
-	bool AgregarItem(Log *log)
-	{
-		if (CA < NMAX)
-			vector[CA++] = log;
-		else throw new exception("No hay tamanio suficiente para agregar el item");;
-		return true;
-	}
+	void Registrar(Log* log);
+	void Registrar(string descripcion);
+	void Listar();
+	bool AgregarItem(Log* log);
 };

@@ -1,4 +1,5 @@
 #pragma once 
+//#pragma warning 
 #include "cAvion.h"
 #include "Logger.h"
 #include "cCodigoPasaje.h"

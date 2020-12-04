@@ -10,14 +10,8 @@ class Log
 	time_t Timestamp;
 
 public:
-	string to_string() {
-		string retornar = "";
-		char* dt = ctime(&Timestamp); //Sat Jan  8 20:07:41 2011
-		string tiempo = string(dt);
-		retornar = tiempo.substr(0, tiempo.length() - 1) + " - " + descripcion;
-		return retornar;
-	}
-	string getclave() { return descripcion; }
+	string to_string();
+	string getclave();
 	Log(string descripcion, time_t Timestamp = time(0));
 
 };
