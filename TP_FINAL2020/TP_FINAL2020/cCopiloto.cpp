@@ -6,10 +6,9 @@ cCopiloto::cCopiloto(string nombre, const string dni, cCodigoPasaje *codigodelpa
 {
 }
 
-void cCopiloto::Comunicar_Torre() //VER SI NO ES OTRA COSA LO Q ME PIDEN	
+void cCopiloto::Comunicar_Torre() 
 {	
-	//Logger Mensaje;
-	Mensaje.AgregarItem(new Log("LLamando torre"));
+	cAvion::logger.AgregarItem(new Log("Llamando torre"));
 	cout << "El copiloto " << this->Nombre << " se esta comunicando con la Torre de control." << endl;
 }
 

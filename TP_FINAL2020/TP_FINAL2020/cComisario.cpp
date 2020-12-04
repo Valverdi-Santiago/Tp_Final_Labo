@@ -8,7 +8,7 @@ cComisario::cComisario(string nombre, const string dni, cCodigoPasaje *codigodel
 
 void cComisario::Reduce(cPasajero* p)
 {
-	Mensaje.AgregarItem(new Log("Reduciendo Pasajero"));
+	cAvion::logger.AgregarItem(new Log("Reduciendo Pasajero"));
 
 	cout << "Reduciendo a pasajero "<< this->Nombre << endl;
 	p->Set_Estado(true);
@@ -17,7 +17,7 @@ void cComisario::Reduce(cPasajero* p)
 
 void cComisario::Encerrar(cPasajero* p)
 { 
-	Mensaje.AgregarItem(new Log("Encerrando Pasajero"));
+	cAvion::logger.AgregarItem(new Log("Encerrando Pasajero"));
 
 	cout << "Encerrando Pasajero" << endl;
 }

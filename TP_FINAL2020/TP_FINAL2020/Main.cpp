@@ -10,6 +10,7 @@
 
 int main()
 {
+	srand(time_t(NULL));
 	//Crear un avion
 	//Crear una lista de Personas con sus codigos
 	//Agregar y verificar las pasajeros y tripulantes al avion, mediante el codigo (la lista de codigos habilitada para viajar la tiene el avion)

@@ -15,30 +15,28 @@ void cPasajero::Set_Estado(bool Estado)
 
 void cPasajero::Perdir_Alimento(cPersona* a)
 { 
-	cAzafata* azafata = dynamic_cast<cAzafata*>(a);
-	if (azafata != NULL)
-	{
-		int menu;
-		srand(time_t(NULL));
-		menu = rand() % 10;
+	
+	int menu;
+	srand(time_t(NULL));
+	menu=rand() % 10;
+	
+	if(a->Atender_Pasajero(this)==true)
+		a->Entregar_Alimento( menu, this);
+	Mensaje.AgregarItem(new Log("Pasajero pidiendo alimento"));
 
-		if (azafata->Atender_Pasajero(this) == true)
-			azafata->Entregar_Alimento(menu, this);
-		Mensaje.AgregarItem(new Log("Pasajero pidiendo alimento"));
-	}
 }
 
 void cPasajero::Banio()
 {
 	cout << "" << this->Nombre << " va al banio." << endl;
 	this->Volver_Asiento();
-	Mensaje.AgregarItem(new Log("Pasajero va al banio"));
+	cAvion::logger.AgregarItem(new Log("Pasajero va al banio"));
 
 }
 
 void cPasajero::Dormir()
 {
-	Mensaje.AgregarItem(new Log("Pasajero duerme"));
+	cAvion::logger.AgregarItem(new Log("Pasajero duerme"));
 
 	cout << "" << this->Nombre << " duerme." << endl;
 }
