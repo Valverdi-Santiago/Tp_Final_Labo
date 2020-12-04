@@ -27,7 +27,7 @@ void cCodigoPasaje::Set_Asiento(char aciento)
 	Asiento = aciento;
 }
 
-const string cCodigoPasaje::Get_Dni()
+const string cCodigoPasaje::getclave()
 {
 	return Dni;
 }

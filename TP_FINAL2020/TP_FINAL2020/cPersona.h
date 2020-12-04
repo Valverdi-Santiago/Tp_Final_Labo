@@ -17,10 +17,10 @@ public:
 	cPersona(string nombre, const string dni, cCodigoPasaje *codigodelpasaje);
 	cPersona(cPersona &p);
 
-	const string Get_DNI();
+	const string getclave();
 	string To_String();
 	void Imprimir();
 
-	~cPersona();
+	virtual ~cPersona();
 };
 

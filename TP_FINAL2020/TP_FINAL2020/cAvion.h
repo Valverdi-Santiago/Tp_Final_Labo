@@ -14,10 +14,10 @@ class cAvion
 {
 private:
 	cLista<cCodigoPasaje>* ListaCodigosPasajes;
-	static Logger logger;
 
 public:
 	cLista<cPersona>* ListaPersonas;
+	static Logger logger;
 
 	cAvion();
 
@@ -26,7 +26,6 @@ public:
 	void Verificar_Codigo(cPersona *Persona);
 
 	unsigned int Get_CantidadPersonasAbordo();
-	//void Imprimir_ListaPasajeros();
 
 	~cAvion();
 };

@@ -12,7 +12,7 @@ cPersona::cPersona(): DNI(" ")
 cPersona::cPersona(string nombre, const string dni, cCodigoPasaje *codigodelpasaje) :DNI(dni)
 {
 	Nombre = nombre;
-	if (codigodelpasaje->Get_Dni() == dni)//PARA ESTAR SEGUROS DE QUE ESE PASAJE LE CORRESPONDE A ESA PERSONA
+	if (codigodelpasaje->getclave() == dni)//PARA ESTAR SEGUROS DE QUE ESE PASAJE LE CORRESPONDE A ESA PERSONA
 		CodigoDePasaje = codigodelpasaje;
 	else
 		CodigoDePasaje = NULL;
@@ -22,7 +22,7 @@ cPersona::cPersona(cPersona & p) :DNI(p.DNI)
 {
 	Nombre = p.Nombre;
 	Estado = p.Estado;
-	if (p.CodigoDePasaje->Get_Dni() == DNI)
+	if (p.CodigoDePasaje->getclave() == DNI)
 		CodigoDePasaje = p.CodigoDePasaje;
 	else
 		CodigoDePasaje = NULL;
@@ -30,7 +30,7 @@ cPersona::cPersona(cPersona & p) :DNI(p.DNI)
 
 
 
-const string cPersona::Get_DNI()
+const string cPersona::getclave()
 {
 	return DNI;
 }
@@ -45,7 +45,7 @@ string cPersona::To_String()
 
 void cPersona::Imprimir()
 {
-	cout << this->To_String() << endl;
+	cout << this->To_String() << endl << endl;
 }
 
 

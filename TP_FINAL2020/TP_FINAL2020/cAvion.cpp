@@ -1,6 +1,6 @@
 #include "cAvion.h"
 
-Logger cAvion::logger = NULL; //VER SI ESTA BIEN
+Logger cAvion::logger = NULL; 
 
 cAvion::cAvion()
 {
@@ -8,14 +8,14 @@ cAvion::cAvion()
 	ListaPersonas = new cLista<cPersona>(NMAX);
 	bool aux;
 	aux=ListaCodigosPasajes[0].AgregarItem(new cCodigoPasaje("TU", "23456456", 05, 'F'));
-	aux=ListaCodigosPasajes[1].AgregarItem(new cCodigoPasaje("BS", "23456456", 06, 'J'));//NO DEBERIA DE AGREGARLO A LA LISTA PERSONAS
-	aux=ListaCodigosPasajes[2].AgregarItem(new cCodigoPasaje("AZ", "45345345", 03, 'A'));
+	aux = ListaCodigosPasajes[1].AgregarItem(new cCodigoPasaje("BS", "23456456", 06, 'J')); //NO DEBERIA DE AGREGARLO A LA LISTA PERSONAS
+	aux = ListaCodigosPasajes[2].AgregarItem(new cCodigoPasaje("AZ", "45345345", 03, 'A'));
 	aux = ListaCodigosPasajes[3].AgregarItem(new cCodigoPasaje("PC", "43234789", 01, 'B'));
 	aux = ListaCodigosPasajes[4].AgregarItem(new cCodigoPasaje("BS", "13345345", 12, 'C'));
 	aux = ListaCodigosPasajes[5].AgregarItem(new cCodigoPasaje("CO", "13456567", 03, 'D'));
-	aux = ListaCodigosPasajes[6].AgregarItem(new cCodigoPasaje("TU", "13453635", 12, 'A'));//NO DEBERIA DE AGREGARLO A LA LISTA PERSONAS
-
-	logger.AgregarItem(); 
+	aux = ListaCodigosPasajes[6].AgregarItem(new cCodigoPasaje("TU", "13453635", 12, 'A'));  //NO DEBERIA DE AGREGARLO A LA LISTA PERSONAS
+	aux = ListaCodigosPasajes[6].AgregarItem(new cCodigoPasaje("PI", "13564746", 00, 'A'));
+	
 	/*int Num,Num2;
 	srand(time_t(NULL));
 	for (int i = 0; i < 10; i++)
@@ -59,7 +59,7 @@ void cAvion::AsignarAciento_Comisario(cComisario * Persona)//RESERVA EL ASIENTO 
 
 void cAvion::Verificar_Codigo(cPersona* Persona)
 {
-	cCodigoPasaje* aux = ListaCodigosPasajes->BuscarItem(Persona->Get_DNI());
+	cCodigoPasaje* aux = ListaCodigosPasajes->BuscarItem(Persona->getclave());
 	if (aux != NULL)
 		Registro_Tripulantes(Persona);
 }
@@ -69,8 +69,6 @@ unsigned int cAvion::Get_CantidadPersonasAbordo()
 {
 	return ListaPersonas->getCA();
 }
-
-
 
 
 cAvion::~cAvion()

@@ -13,12 +13,11 @@ public:
 	void Set_Estado(bool Estado);
 
 
-	//void Llevados_Avion(); //ver si va aca o en avion
-	void Perdir_Alimento(cAzafata* a);
+	void Perdir_Alimento(cPersona* a);
 	void Banio();
 	void Dormir();
-	void Llamar_Azafata(cAzafata* a);
+	void Llamar_Azafata(cPersona* a);
 	void Volver_Asiento();
-
+	
 	~cPasajero();
 };

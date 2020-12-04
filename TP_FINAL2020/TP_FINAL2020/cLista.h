@@ -95,15 +95,15 @@ void cLista<T>::Listar()
 }
 
 template<class T>
-bool cLista<T>::AgregarItem(T* item)
+bool cLista<T>::AgregarItem(T* item) 
 {
 
-	//T* i_f = BuscarItem(item->getclave());
-	//if (i_f != NULL)throw new exception("Ya se encuentra en la lista");
+	T* i_f = BuscarItem(item->getclave());
+	if (i_f != NULL)throw new exception("Ya se encuentra en la lista");
 
 	if (CA < TAM)
 		vector[CA++] = item;
-	//else throw new exception("No hay tama�o suficiente para agregar el item");;
+	else throw new exception("No hay tamano suficiente para agregar el item");;
 	return true;
 }
 template<class T>
@@ -173,7 +173,7 @@ T* cLista<T>::BuscarItem(string clave)
 {
 	for (unsigned int i = 0; i < CA; i++)
 	{
-		if (vector[i]->Get_Dni() == clave)
+		if (vector[i]->getclave() == clave)
 			return vector[i];
 	}
 	return NULL;

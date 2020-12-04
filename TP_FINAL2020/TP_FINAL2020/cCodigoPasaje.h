@@ -17,7 +17,7 @@ public:
 
 	string To_StringCodigo();
 	void Set_Asiento(char aciento);
-	const string Get_Dni();
+	const string getclave();
 
 	~cCodigoPasaje();
 };
