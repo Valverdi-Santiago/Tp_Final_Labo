@@ -17,7 +17,7 @@ void cPasajero::Perdir_Alimento(cPersona* a)
 { 
 	cAzafata* azafata = dynamic_cast<cAzafata*>(a);
 	int menu;
-	srand(time_t(NULL));
+	//srand(time_t(NULL));
 	menu=rand() % 10;
 	if (azafata != NULL) //PARA VER SI ES AZAFATA O NO
 	{
@@ -48,7 +48,7 @@ void cPasajero::Llamar_Azafata(cPersona * a)
 	{
 		bool aux=azafata->Atender_Pasajero(this);
 		if (aux == false)
-			cAvion::logger.AgregarItem(new Log("LA azafata esta ocupada")); //verrrrrrrrrrrrr
+			cAvion::logger.AgregarItem(new Log("LA azafata esta ocupada"));
 	}
 }
 

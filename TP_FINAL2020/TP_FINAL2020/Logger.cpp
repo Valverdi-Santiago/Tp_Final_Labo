@@ -19,10 +19,15 @@ void Logger::Registrar(string descripcion)
 	AgregarItem(new Log(descripcion));
 }
 
-void Logger::Listar()
+void Logger::ListarLog()
 {
+	
+	this->Listar();
+	//*this->Listar();
+	/*vector[0]->Listar();
 	for (unsigned int i = 0; i <= CA; ++i)
 		cout << vector[i]->to_string() << endl;
+	*/
 }
 
 bool Logger::AgregarItem(Log* log)
@@ -30,5 +35,6 @@ bool Logger::AgregarItem(Log* log)
 	if (CA < NMAX)
 		vector[CA++] = log;
 	else throw new exception("No hay tamanio suficiente para agregar el item");;
+	ca++;
 	return true;
 }

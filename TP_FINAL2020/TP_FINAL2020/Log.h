@@ -2,6 +2,7 @@
 #pragma once
 #include <string>
 #include <ctime>
+#include<iostream>
 #pragma warning(disable  : 4996)
 using namespace std;
 class Log
@@ -10,7 +11,7 @@ class Log
 	time_t Timestamp;
 
 public:
-	string to_string();
+	string Imprimir();
 	string getclave();
 	Log(string descripcion, time_t Timestamp = time(0));
 

@@ -87,8 +87,8 @@ cLista<T>::~cLista()
 template<class T>
 void cLista<T>::Listar()
 {
-
-	for (unsigned int i = 0; i < CA; i++)
+	unsigned int aux = this->getCA();
+	for (unsigned int i = 0; i < aux; i++)
 	{
 		vector[i]->Imprimir();// imprimir
 	}

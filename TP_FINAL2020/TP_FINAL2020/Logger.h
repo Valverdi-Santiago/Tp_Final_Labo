@@ -7,7 +7,7 @@ using namespace std;
 
 class Logger : protected cLista<Log>
 {
-	unsigned int CA=0;
+	unsigned int ca=0;
 
 public:
 
@@ -16,6 +16,6 @@ public:
 
 	void Registrar(Log* log);
 	void Registrar(string descripcion);
-	void Listar();
+	void ListarLog();
 	bool AgregarItem(Log* log);
 };
