@@ -36,10 +36,10 @@ int main()
 	primera->Banio();
 	primeraclase->Dormir();
 	primera->Llamar_Azafata(azafata);
-	cout << "..........................." << endl;
+	cout << "..............................." << endl;
 	turista->Perdir_Alimento(comisario); //NO LO DEBERIA DE HACER 
 	
-
+	cout << "----------LOGGER----------" << endl;
 	cAvion::logger.Listar();
 
 	cout << "\n----------LOS PASAJEROS SON----------" << endl;
