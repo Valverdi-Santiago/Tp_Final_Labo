@@ -36,9 +36,9 @@ const string cPersona::getclave()
 string cPersona::To_String()
 {
 	if (this->CodigoDePasaje != NULL)
-		return "Nombre: " + Nombre + "  DNI: " + DNI + "\nCodigo de pasaje: " + this->CodigoDePasaje->To_StringCodigo();
+		return "Nombre: " + Nombre + "  -DNI: " + DNI + "  -Codigo de pasaje: " + this->CodigoDePasaje->To_StringCodigo();
 	else
-		return "Nombre: " + Nombre + "  DNI: " + DNI + "\nCodigo de pasaje: No tiene.";
+		return "Nombre: " + Nombre + "  -DNI: " + DNI + "  -Codigo de pasaje: No tiene.";
 }
 
 void cPersona::Imprimir() 

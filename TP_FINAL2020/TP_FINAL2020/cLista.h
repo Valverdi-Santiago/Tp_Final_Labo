@@ -2,7 +2,7 @@
 #define NMAX 10
 
 #include <string>
-
+#include <iostream>
 using namespace std;
 template<class T>
 class cLista
@@ -90,6 +90,7 @@ void cLista<T>::Listar()
 	unsigned int aux = this->getCA();
 	for (unsigned int i = 0; i < aux; i++)
 	{
+		cout << "-Pasajero  " << i<<": "<<endl;
 		vector[i]->Imprimir();// imprimir
 	}
 }
